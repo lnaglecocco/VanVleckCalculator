@@ -1,0 +1,33 @@
+
+data_
+_chemical_name_mineral ?NaNiO2(monoclinic)?
+_cell_length_a 5.2748(2)
+_cell_length_b 2.83173(13)
+_cell_length_c 5.5275(3)
+_cell_angle_alpha 90
+_cell_angle_beta 110.358(3)
+_cell_angle_gamma 90
+_cell_volume 77.405(6)
+_symmetry_space_group_name_H-M c2/m
+loop_
+	_symmetry_equiv_pos_as_xyz
+	 'x, y, z '
+	 '-x, y, -z '
+	 'x, -y, z '
+	 '-x, -y, -z '
+	 'x+1/2, y+1/2, z '
+	 '-x+1/2, y+1/2, -z '
+	 'x+1/2, -y+1/2, z '
+	 '-x+1/2, -y+1/2, -z '
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_B_iso_or_equiv
+Ni1 Ni   2 0 0 0 1 0.00(4)
+O1 O   4 0.2820(4) 0 0.8026(4) 1 0.00(6)
+Na1 Na   2 0 0.5 0.5 1 0.82(10)
