@@ -285,7 +285,7 @@ Bond angle variance parameterises the degree of angular distortion from a perfec
 
 $$\sigma^2 = \frac{1}{m-1} \sum_{i=1}^m (\phi_i - \phi_0)^2$$
 
-where $m$ is the number of bond angles (i.e. 12 for octahedra), $\phi_i$ is bond angle $i$, and $\phi_0$ is the ideal bond angle for a regular octahedron (i.e. 90$^\circ$).
+where $m$ is the number of bond angles (i.e. 12 for octahedra), $\phi_i$ is bond angle $i$, and $\phi_0$ is the ideal bond angle for a regular octahedron (i.e. 90°).
 
 It can be calculated using the `calculate_bond_angle_variance()` parameter as follows:
 
@@ -353,7 +353,7 @@ This is described in [_Koçer, Can P., et al. "Cation disorder and lithium inser
 
 ###### 2.4.7.2 Off-centering metric
 
-An alternative metric was defined by PS Halasyamani in 2004. First, three angles $\theta_1$, $\theta_2$, and $\theta_3$ are defined; these are the angles between opposite ligands in an octahedron via the core site, i.e. these angles which would be 180$^\circ$ for a perfect, undistorted, regular octahedron. For each $i$th angle, two distances $R_i^A$ and $R_i^B$ are defined which is the distances between the core site and each of the two ligands giving rise to a particular value of $\theta$.
+An alternative metric was defined by PS Halasyamani in 2004. First, three angles $\theta_1$, $\theta_2$, and $\theta_3$ are defined; these are the angles between opposite ligands in an octahedron via the core site, i.e. these angles which would be 180° for a perfect, undistorted, regular octahedron. For each $i$th angle, two distances $R_i^A$ and $R_i^B$ are defined which is the distances between the core site and each of the two ligands giving rise to a particular value of $\theta$.
 
 Given these values, the off-centering metric can then be calculated as follows:
 
