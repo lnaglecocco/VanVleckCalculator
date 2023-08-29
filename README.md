@@ -19,6 +19,7 @@ Then, in a Jupyter notebook (or whatever you use to write Python), write the fol
 ```
 import sys
 sys.path.insert(1,r"C:\Users\User\Documents\GitHub\VanVleckCalculator\code")
+from van_vleck_calculator import *
 ```
 where the path should be the path containing VanVleckCalculator's code. This will enable VanVleckCalculator to be accessed.
 
