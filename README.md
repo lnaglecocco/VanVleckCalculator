@@ -321,9 +321,11 @@ $$\mathrm{ECoN} = \sum_{i=1}^n \exp \left[ 1 - \left(\frac{l_i}{l'_\mathrm{av}} 
 
 where, $l'_\mathrm{av}$ is not a normal mean average, but a weighted average bond length:
 
-$$l'_\mathrm{av} =
-\frac{  \sum_{i=1}^n l_i \exp \left[ 1 - \left(\frac{l_i}{l_\mathrm{min}} \right)^6  \right]}
-{ \sum_{i=1}^n   \exp \left[ 1 - \left(\frac{l_i}{l_\mathrm{min}} \right)^6 \right]}$$
+$$ l'_ \mathrm{av} = \frac{  
+\sum\limits_{i=1}^n l_i \exp \left[ 1 - \left(\frac{l_i}{l_\mathrm{min}} \right)^6  \right]
+}{
+\sum\limits_{i=1}^n   \exp \left[ 1 - \left(\frac{l_i}{l_\mathrm{min}} \right)^6 \right]
+} $$
 
 It can be calculated using `calculate_effective_coordination_number()` as follows:
 
