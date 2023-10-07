@@ -1322,7 +1322,7 @@ class Octahedron(object):
           print("There are {} pairs. These are:".format(len(pairs)))
           for i in pairs:
             print(i)
-          print("\nThere are {} duplicating_pairs. These are:")
+          print("\nThere are {} duplicating_pairs. These are:".format(len(duplicating_pairs)))
           for i in duplicating_pairs:
             print(i)
           assert index_max_angle==index_max_dist, err_string
