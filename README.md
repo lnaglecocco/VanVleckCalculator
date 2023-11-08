@@ -12,7 +12,7 @@ It is developed by [Liam Nagle-Cocco](https://lnaglecocco.github.io), a PhD stud
 
 ### 1.2 Setup guide
 
-Download the van_vleck_calculator.py file, or better yet, close the repository using Git or GitHub Desktop so you can pull any updates.
+Download the van_vleck_calculator.py file, or better yet, clone the repository using Git or GitHub Desktop so you can pull any updates.
 
 Then, in a Jupyter notebook (or whatever you use to write Python), write the following:
 
