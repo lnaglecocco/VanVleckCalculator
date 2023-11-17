@@ -371,4 +371,4 @@ This is described in [_Halasyamani, P. Shiv. "Asymmetric cation coordination in 
 
 ## 3 Citation
 
-If you use this code in your work, please cite both this GitHub repository and the paper [_L. A. V. Nagle-Cocco and S. E. Dutton, Under Review (2023)._](https://arxiv.org/abs/2310.18255)
+If you use this code in your work, please cite both this GitHub repository and the paper [_L. A. V. Nagle-Cocco and S. E. Dutton, Journal of Applied Crystallography (In Press)._](https://arxiv.org/abs/2310.18255)
