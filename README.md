@@ -63,7 +63,7 @@ local_coords = (
     [0.54139,0.16782,0]
 )
 struc = Structure(lattice=latt,species=["Mn","O","O"],coords=local_coords)
-struc = struc.from_spacegroup(lattice=latt,species=[Mn","O","O"],coords=local_coords,sg="I4/m")
+struc = struc.from_spacegroup(lattice=latt,species=["Mn","O","O"],coords=local_coords,sg="I4/m")
 ```
 
 For more information on this, see the [documentation for Pymatgen](https://pymatgen.org/pymatgen.core.structure.html).
