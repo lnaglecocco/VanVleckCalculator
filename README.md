@@ -3,7 +3,7 @@
 
 VanVleckCalculator is a Python package for the calculation of the van Vleck distortion modes of octahedra, along with various other parameters including octahedral volume, angular shear, and various distortion parameters such as bond length distortion index, quadratic elongation, and the Van Vleck octahedral distortion modes.
 
-It is developed by [Liam Nagle-Cocco](https://lnaglecocco.github.io), a PhD student in physics at the University of Cambridge. For questions or suggestions, email [lavn2@cam.ac.uk](lavn2@cam.ac.uk).
+It was developed by [Liam Nagle-Cocco](https://lnaglecocco.github.io) while a PhD student in physics at the University of Cambridge. For questions or suggestions, email [lnc@stanford.edu](lnc@stanford.edu).
 
 ### 1.1 Requirements
 - Python 3.8 or above
