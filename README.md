@@ -29,7 +29,7 @@ For more in-depth information, see the documentation or the code itself. See als
 
 ### 2.1 Creating a Pymatgen.core.structure object
 
-To initialise an `Octahedron` object, it is necessary to first create a [Pymatgen Structure object](https://pymatgen.org/pymatgen.core.structure.html) for your unit cell. The easiest way to do this is by importing a [CIF](https://en.wikipedia.org/wiki/Crystallographic_Information_File). It is also possible to manually create a `Pymatgen.core.structure` object using known lattice parameters and atomic coordinates.
+To initialise an `Octahedron` object, it is necessary to first create a `Pymatgen.core.structure` object ([see here for details](https://pymatgen.org/pymatgen.core.structure.html)) for your unit cell. The easiest way to do this is by importing a [CIF](https://en.wikipedia.org/wiki/Crystallographic_Information_File) or equivalent file containing crystal structure information. It is also possible to manually create a `Pymatgen.core.structure` object using known lattice parameters and atomic coordinates.
 
 #### 2.1.1 Using a CIF
 
@@ -102,9 +102,9 @@ oct1 = Octahedron(struc[0],struc,possible_ligands=["O","Cl"])
 
 Van Vleck defined a set of six modes based on the symmetry of the octahedra. These are labelled Q<sub>1</sub> to Q<sub>6</sub>, where Q<sub>2</sub> and <sub>3</sub> are the modes sensitive to [Jahn-Teller distortion](https://en.wikipedia.org/wiki/Jahn%E2%80%93Teller_effect), and Q<sub>4</sub> to Q<sub>6</sub> are angular shear modes. To calculate these modes in the way van Vleck proposed in his original paper requires a Cartesian basis with the origin as the centre of the octahedron and the core-ligand bonds along the axes of the basis. Determination of the basis is complicated when there is angular distortion, as there is no way to orient the octahedron in the basis such that all core-ligand bonds are along axes. VanVleckCalculator is a tool to overcome this challenge and calculate the van Vleck distortion modes of an octahedron by rotating the octahedron to minimise the deviation of each ligand from the axes.
 
-In addition to the van Vleck modes, this same rotation algorithm is used to calculate the angular shear, anti-shear, and angular shear fraction defined in the method paper accompanying this code package (under review).
+In addition to the van Vleck modes, this same rotation algorithm is used to calculate the angular shear, anti-shear, and angular shear fraction defined in the method paper accompanying this code package, [L. A. V. Nagle-Cocco and S. E. Dutton, _Journal of Applied Crystallography_ (2024), 57, 1.](https://scripts.iucr.org/cgi-bin/paper?S1600576723009925)
 
-For details on the application and interpretation of the modes, we refer the reader to the method paper accompanying this code package (under review) and the literature. This section will explain the details of how the algorithm works.
+For details on the application and interpretation of the modes, we refer the reader to the method paper accompanying this code package ([L. A. V. Nagle-Cocco and S. E. Dutton, _Journal of Applied Crystallography_ (2024), 57, 1.](https://scripts.iucr.org/cgi-bin/paper?S1600576723009925)) and the literature. This section will explain the details of how the algorithm works.
 
 ##### 2.3.2 Origin fixing
 
@@ -226,7 +226,7 @@ Another Van Vleck calculation method is `calculate_degenerate_Q3_van_vleck_modes
 
 ##### 2.3.5 Reference
 
-The van Vleck modes were introduced in [_Van Vleck, J. H. "The Jahn‐Teller Effect and Crystalline Stark Splitting for Clusters of the Form XY6." The Journal of Chemical Physics 7.1 (1939): 72-84._](https://aip.scitation.org/doi/abs/10.1063/1.1750327) The first known use of the approximation where angular distortion is ignored was in [_Kanamori, Junjiro. "Crystal distortion in magnetic compounds." Journal of Applied Physics 31.5 (1960): S14-S23._](https://pubs.aip.org/aip/jap/article-abstract/31/5/S14/147388/Crystal-Distortion-in-Magnetic-Compounds)
+The van Vleck modes were introduced in [Van Vleck, J. H. "The Jahn‐Teller Effect and Crystalline Stark Splitting for Clusters of the Form XY6." _The Journal of Chemical Physics_ 7.1 (1939): 72-84.](https://aip.scitation.org/doi/abs/10.1063/1.1750327) The first known use of the approximation where angular distortion is ignored was in [Kanamori, Junjiro. "Crystal distortion in magnetic compounds." _Journal of Applied Physics_ 31.5 (1960): S14-S23.](https://pubs.aip.org/aip/jap/article-abstract/31/5/S14/147388/Crystal-Distortion-in-Magnetic-Compounds)
 
 #### 2.4 Calculating Octahedral parameters
 
@@ -243,7 +243,7 @@ oct1.calculate_volume()
 
 Note volume is given in Ångstroms cubed.
 
-This approach to the calculation was inspired by the work in [Swanson, Donald K., and R. C. Peterson. "Polyhedral volume calculations." The Canadian Mineralogist 18.2 (1980): 153-156.](https://pubs.geoscienceworld.org/canmin/article/18/2/153/11407/Polyhedral-volume-calculations)
+This approach to the calculation was inspired by the work in [Swanson, Donald K., and R. C. Peterson. "Polyhedral volume calculations." _The Canadian Mineralogist_ 18.2 (1980): 153-156.](https://pubs.geoscienceworld.org/canmin/article/18/2/153/11407/Polyhedral-volume-calculations)
 
 #### 2.4.2 External surface area
 
@@ -255,7 +255,7 @@ oct1.calculate_surface_area()
 
 where the returned value is in units of Ångstroms squared.
 
-This approach to the calculation was inspired by the work in [Swanson, Donald K., and R. C. Peterson. "Polyhedral volume calculations." The Canadian Mineralogist 18.2 (1980): 153-156.](https://pubs.geoscienceworld.org/canmin/article/18/2/153/11407/Polyhedral-volume-calculations)
+This approach to the calculation was inspired by the work in [Swanson, Donald K., and R. C. Peterson. "Polyhedral volume calculations." _The Canadian Mineralogist_ 18.2 (1980): 153-156.](https://pubs.geoscienceworld.org/canmin/article/18/2/153/11407/Polyhedral-volume-calculations)
 
 #### 2.4.3 Bond length distortion index
 
@@ -277,7 +277,7 @@ Another variation involves calculating this same parameter but using the average
 polyhedron.calculate_bond_length_distortion_index(octahedral_centre = "average_ligand_position")
 ```
 
-It was first defined in [_Baur, W. H. "The geometry of polyhedral distortions. Predictive relationships for the phosphate group." Acta Crystallographica Section B: Structural Crystallography and Crystal Chemistry 30.5 (1974): 1195-1215._](https://scripts.iucr.org/cgi-bin/paper?a11025)
+It was first defined in [Baur, W. H. "The geometry of polyhedral distortions. Predictive relationships for the phosphate group." _Acta Crystallographica Section B: Structural Crystallography and Crystal Chemistry_ 30.5 (1974): 1195-1215.](https://scripts.iucr.org/cgi-bin/paper?a11025)
 
 #### 2.4.4 Bond angle variance
 
@@ -295,7 +295,7 @@ oct1.calculate_bond_angle_variance()
 
 Output can be calculated in radians by using the optional argument `degrees` set to False, i.e. `calculate_bond_angle_variance(degrees=False)`.
 
-It was first defined in [_Baur, W. H. "The geometry of polyhedral distortions. Predictive relationships for the phosphate group." Acta Crystallographica Section B: Structural Crystallography and Crystal Chemistry 30.5 (1974): 1195-1215._](https://scripts.iucr.org/cgi-bin/paper?a11025)
+It was first defined in [Baur, W. H. "The geometry of polyhedral distortions. Predictive relationships for the phosphate group." _Acta Crystallographica Section B: Structural Crystallography and Crystal Chemistry_ 30.5 (1974): 1195-1215.](https://scripts.iucr.org/cgi-bin/paper?a11025)
 
 #### 2.4.5 Quadratic elongation
 
@@ -311,7 +311,7 @@ It can be calculated using `calculate_quadratic_elongation()` as follows:
 oct1.calculate_quadratic_elongation()
 ```
 
-It was first defined in [_Robinson, Keith, G. V. Gibbs, and P. H. Ribbe. "Quadratic elongation: a quantitative measure of distortion in coordination polyhedra." Science 172.3983 (1971): 567-570_](https://www.science.org/doi/abs/10.1126/science.172.3983.567)
+It was first defined in [Robinson, Keith, G. V. Gibbs, and P. H. Ribbe. "Quadratic elongation: a quantitative measure of distortion in coordination polyhedra." _Science_ 172.3983 (1971): 567-570](https://www.science.org/doi/abs/10.1126/science.172.3983.567)
 
 #### 2.4.6 Effective coordination number
 
@@ -333,7 +333,7 @@ It can be calculated using `calculate_effective_coordination_number()` as follow
 oct1.calculate_effective_coordination_number()
 ```
 
-It was first defined by Rudolf Hoppe in a 1979 work, see later paper here: [Hoppe, Rudolf, et al. "A new route to charge distributions in ionic solids." Journal of the Less Common Metals 156.1-2 (1989): 105-122.](https://www.sciencedirect.com/science/article/pii/0022508889904116)
+It was first defined by Rudolf Hoppe in a 1979 work, see later paper here: [Hoppe, Rudolf, et al. "A new route to charge distributions in ionic solids." _Journal of the Less Common Metals_ 156.1-2 (1989): 105-122.](https://www.sciencedirect.com/science/article/pii/0022508889904116)
 
 ##### 2.4.7 Off-centering metrics
 
@@ -351,7 +351,7 @@ It can be calculated in VanVleckCalculator as follows:
 off_centre_dist = oct1.calculate_off_centering_distance()
 ```
 
-This is described in [_Koçer, Can P., et al. "Cation disorder and lithium insertion mechanism of Wadsley–Roth crystallographic shear phases from first principles." Journal of the American Chemical Society 141.38 (2019): 15121-15134._](https://pubs.acs.org/doi/full/10.1021/jacs.9b06316)
+This is described in [Koçer, Can P., et al. "Cation disorder and lithium insertion mechanism of Wadsley–Roth crystallographic shear phases from first principles." _Journal of the American Chemical Society_ 141.38 (2019): 15121-15134.](https://pubs.acs.org/doi/full/10.1021/jacs.9b06316)
 
 ###### 2.4.7.2 Off-centering metric
 
@@ -367,8 +367,8 @@ It can be calculated in VanVleckCalculator as follows:
 off_centre_param = oct1.calculate_off_centering_metric()
 ```
 
-This is described in [_Halasyamani, P. Shiv. "Asymmetric cation coordination in oxide materials: Influence of lone-pair cations on the intra-octahedral distortion in d<sub>0</sub> transition metals." Chemistry of Materials 16.19 (2004): 3586-3592._](https://pubs.acs.org/doi/abs/10.1021/cm049297g)
+This is described in [Halasyamani, P. Shiv. "Asymmetric cation coordination in oxide materials: Influence of lone-pair cations on the intra-octahedral distortion in d<sub>0</sub> transition metals." _Chemistry of Materials_ 16.19 (2004): 3586-3592.](https://pubs.acs.org/doi/abs/10.1021/cm049297g)
 
 ## 3 Citation
 
-If you use this code in your work, please cite both this GitHub repository and the paper [_L. A. V. Nagle-Cocco and S. E. Dutton, Journal of Applied Crystallography (2024), 57, 1._](https://scripts.iucr.org/cgi-bin/paper?S1600576723009925)
+If you use this code in your work, please cite both this GitHub repository and the paper [L. A. V. Nagle-Cocco and S. E. Dutton, _Journal of Applied Crystallography_ (2024), 57, 1.](https://scripts.iucr.org/cgi-bin/paper?S1600576723009925)
