@@ -204,7 +204,7 @@ modes = oct1.calculate_van_vleck_distortion_modes()
 
 ###### 2.3.4.2 calculate_van_vleck_jahn_teller_params
 
-The `calculate_van_vleck_jahn_teller_params()` method returns two parameters based on the magnitude √(Q<sub>2</sub> + Q<sub>3</sub>) and the angle arctan(Q<sub>2</sub>/Q<sub>3</sub>) of the Jahn-Teller modes Q<sub>2</sub> and Q<sub>3</sub>. This angle will be in the range 0 to 2π. This will return the angle in radians, but using an optional argument `degrees=True` will give an angle in radians. I.e.:
+The `calculate_van_vleck_jahn_teller_params()` method returns two parameters based on the magnitude √(Q<sub>2</sub> + Q<sub>3</sub>) and the angle arctan(Q<sub>2</sub>/Q<sub>3</sub>) of the Jahn-Teller modes Q<sub>2</sub> and Q<sub>3</sub>. This angle will be in the range 0 to 2π. This will return the angle in radians, but using an optional argument `degrees=True` will give an angle in degrees. I.e.:
 
 ```
 params = oct1.calculate_van_vleck_jahn_teller_params()
